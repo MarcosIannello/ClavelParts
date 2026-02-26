@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --app-bg: #0f172a;
+  --app-text: #e4ecff;
+  --main-bg: radial-gradient(circle at top, #1e293b 0, #020617 45%, #020617 100%);
+  --header-bg: rgba(2, 6, 23, 0.92);
+  --header-border: rgba(30, 41, 59, 0.8);
+  --header-nav-text: #9ca3af;
+  --header-nav-active-bg: #0284c7;
+  --header-nav-active-text: #f8fafc;
+  --header-nav-hover-bg: rgba(30, 41, 59, 0.85);
+  --header-nav-hover-text: #e2e8f0;
+  --header-link: #cbd5e1;
+  --header-link-hover: #f8fafc;
+  --header-control-bg: rgba(15, 23, 42, 0.95);
+  --header-control-border: rgba(71, 85, 105, 0.75);
+  --header-control-text: #e2e8f0;
+  --header-skeleton: #1f2937;
+  --header-strip-bg: rgba(12, 74, 110, 0.16);
+  --header-strip-border: rgba(12, 74, 110, 0.55);
+  --header-strip-text: #bae6fd;
+  --brand-badge-bg: #38bdf8;
+  --brand-badge-text: #082f49;
+  --brand-title: #f8fafc;
+  --brand-subtitle: #64748b;
+  --footer-bg: #f8fafc;
+  --footer-border: #dbe5f0;
+  --footer-text: #64748b;
+  --footer-link-hover: #0f172a;
+  --login-bg: #0b1220;
+  --login-card-bg: #111827;
+  --login-card-border: #1f2937;
+  --login-title: #f8fafc;
+  --login-subtitle: #94a3b8;
+  --login-button-bg: #0284c7;
+  --login-button-text: #f8fafc;
+  --alert-error-border: rgba(248, 113, 113, 0.5);
+  --alert-error-bg: rgba(153, 27, 27, 0.18);
+  --alert-error-text: #fecaca;
+  --alert-warning-border: rgba(245, 158, 11, 0.45);
+  --alert-warning-bg: rgba(120, 53, 15, 0.2);
+  --alert-warning-text: #fde68a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--app-bg);
+  --color-foreground: var(--app-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="light"] {
+  --app-bg: #e2e8f0;
+  --app-text: #111827;
+  --main-bg: radial-gradient(circle at top, #f8fbff 0, #e2e8f0 48%, #dce6f2 100%);
+  --header-bg: rgba(248, 250, 252, 0.95);
+  --header-border: rgba(148, 163, 184, 0.5);
+  --header-nav-text: #475569;
+  --header-nav-active-bg: #0ea5e9;
+  --header-nav-active-text: #ffffff;
+  --header-nav-hover-bg: rgba(226, 232, 240, 0.85);
+  --header-nav-hover-text: #0f172a;
+  --header-link: #334155;
+  --header-link-hover: #0f172a;
+  --header-control-bg: rgba(255, 255, 255, 0.9);
+  --header-control-border: rgba(148, 163, 184, 0.7);
+  --header-control-text: #0f172a;
+  --header-skeleton: #cbd5e1;
+  --header-strip-bg: rgba(186, 230, 253, 0.45);
+  --header-strip-border: rgba(125, 211, 252, 0.75);
+  --header-strip-text: #0c4a6e;
+  --brand-badge-bg: #0ea5e9;
+  --brand-badge-text: #f8fafc;
+  --brand-title: #0f172a;
+  --brand-subtitle: #64748b;
+  --footer-bg: #f8fafc;
+  --footer-border: #cbd5e1;
+  --footer-text: #64748b;
+  --footer-link-hover: #0f172a;
+  --login-bg: #dbe7f5;
+  --login-card-bg: rgba(255, 255, 255, 0.94);
+  --login-card-border: rgba(148, 163, 184, 0.45);
+  --login-title: #0f172a;
+  --login-subtitle: #64748b;
+  --login-button-bg: #0284c7;
+  --login-button-text: #f8fafc;
+  --alert-error-border: rgba(239, 68, 68, 0.38);
+  --alert-error-bg: rgba(254, 226, 226, 0.85);
+  --alert-error-text: #991b1b;
+  --alert-warning-border: rgba(245, 158, 11, 0.45);
+  --alert-warning-bg: rgba(254, 243, 199, 0.85);
+  --alert-warning-text: #92400e;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--app-bg);
+  color: var(--app-text);
 }
